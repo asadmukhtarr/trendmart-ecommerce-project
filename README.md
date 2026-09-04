@@ -5,3 +5,7 @@
     - Varibale name should be start with alphabect ..
     - Include: Shamil krna ..
     - Types of Methods : GET , POST , DELETE 
+    - == for camparison
+    - = for asign value 
+    - === for comparison value and type
+    - var_dump() function is used for test query ..
