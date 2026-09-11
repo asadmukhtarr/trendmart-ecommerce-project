@@ -9,3 +9,7 @@
     - = for asign value 
     - === for comparison value and type
     - var_dump() function is used for test query ..
+    - . is a concatination operator ..
+    - Mysql_num_rows() function is used for count number of exist rows in data against your query ..
+    - What is session? Session a public variable which we can access all over the project ...
+    -- https://youtu.be/5sdq3lNYXuE

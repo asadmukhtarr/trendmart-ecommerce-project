@@ -10,8 +10,11 @@
                     </h4>
                 </div>
                 <div class="card-body p-4">
+                    <?php if(!empty($_GET['error'])) {?>
+                    <span class="text-danger"><b><?php echo $_GET['error']; ?></b></span>
+                    <?php } ?>
                     <!-- Registration Form -->
-                    <form action="actions/signup.php" method="POST">
+                    <form action="actions/signup.php" class="mt-2" method="POST">
                         <!-- Full Name -->
                         <div class="mb-3">
                             <label for="fullname" class="form-label fw-semibold">
