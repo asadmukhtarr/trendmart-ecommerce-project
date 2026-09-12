@@ -35,7 +35,7 @@
   </style>
 </head>
 <body>
-
+  <?php     session_start();  ?>
   <!-- ===== BOOTSTRAP 5 NAVBAR ===== -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container-fluid px-4">
@@ -59,6 +59,7 @@
               <i class="fas fa-home"></i> Home
             </a>
           </li>
+          <?php if(empty($_SESSION['name'])){ ?>
           <li class="nav-item dropdown d-none d-lg-block">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fas fa-cog"></i> Account
@@ -66,10 +67,18 @@
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="index.php"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
               <li><a class="dropdown-item" href="signup.php"><i class="fas fa-user-plus me-2"></i>Register</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
             </ul>
           </li>
+          <?php } else { ?>
+            <li class="nav-item dropdown d-none d-lg-block">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle"></i> <?php echo $_SESSION['name'] ?>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="actions/logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+            </ul>
+          </li>
+          <?php } ?>  
         </ul>
         <!-- optional small extra: a search or button, but we keep it minimal -->
       </div>

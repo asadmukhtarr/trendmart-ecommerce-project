@@ -10,6 +10,7 @@
         $name = $row['name'];
         session_start();
         $_SESSION['name'] = $name;
+        $_SESSION['last_activity'] = time();
         header('Location:../home.php');
     } else {
         $error = "Email or password is wrong! Try Again";
