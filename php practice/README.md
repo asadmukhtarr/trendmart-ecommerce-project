@@ -15,3 +15,4 @@
     -- https://youtu.be/5sdq3lNYXuE
     - Header function in php used for redirect procces ..
     - session destroy is used for unset the all sessions ...
+    - While loop is used when we dont know the length of array ..
