@@ -1,1 +1,4 @@
-<h2>Show Product</h2>
+@extends('layouts.head')
+@section('content')
+<h2>Welcome to show product ... </h2>
+@endsection

@@ -1,1 +1,4 @@
-<h2>Faq</h2>
+@extends('layouts.head')
+@section('content')
+<h2>Welcome to Faq ... </h2>
+@endsection
